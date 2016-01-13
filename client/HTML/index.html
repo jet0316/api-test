@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>api test</title>
+		<link rel="stylesheet" type="text/css" href="CSS/main.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js"></script>
+		<script src="scripts/main.js"></script>
+	</head>
+	<body ng-app="master">
+	
+		<div ng-controller="main">
+			<form ng-submit="post()">
+				<input placeholder="name" ng-model="product.name">
+				<input placeholder="song" ng-model="product.song">
+				<input placeholder="price" ng-model="product.price">
+				<input type="submit">
+			</form>
+			<div ng-repeat="product in products">
+				<h2>{{product.name}}</h2>
+				<h2>{{product.song}}</h2>
+				<h2>{{product.price}}</h2>
+			</div>
+		</div>
+
+
+	</body>
+</html>
